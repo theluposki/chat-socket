@@ -53,9 +53,53 @@ html,body {
 .title {
   margin: 20px 0;
   color: var(--white2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+}
+
+.title i {
+  animation: animalogo cubic-bezier(1,2.01,.53,-1.59) infinite 32s;
+  font-size: 5rem;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.title span {
+  text-shadow: 0 0 30px rgb(160, 0, 210);
+  z-index: 1;
+}
+
+@keyframes animalogo {
+  0% {
+    transform: rotateZ(0deg);
+    filter: drop-shadow(0 0px 2px rgb(160, 0, 210));
+  }
+  20% {
+    transform: rotateZ(90deg);
+  }
+  40% {
+    transform: rotateZ(180deg) scale(10.5);
+  }
+  60% {
+    transform: rotateZ(360deg) scale(13.5);
+  }
+  80% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg) scale(1.5);
+    filter: drop-shadow(0 4px 6px rgb(160, 0, 210));
+  }
 }
 
 .main {
+  position: relative;
+  z-index: 1;
   width: 37.5rem;
   height: 90%;
   border-radius: 16px;
