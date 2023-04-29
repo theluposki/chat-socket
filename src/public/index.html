@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>Chat - Socket</title>
+</head>
+<body>
+  <h1 class="title">Chat-socket 💬</h1>
+
+  <main class="main">
+
+    <div class="name">
+      <span>
+        <i class='bx bx-user' style='color:#f6f6f6'></i>
+      </span>
+      <input type="text" class="name-input" id="name-input" value="Anonymous" maxlength="20">
+    </div>
+
+    <ul class="message-container" id="message-container"></ul>
+
+    <form class="message-form" id="message-form">
+      <input type="text" name="message" id="message-input" class="message-input" placeholder="Message">
+      <button type="submit" class="send-button">
+        <i class='bx bx-send' style='color:#f6f6f6' ></i>
+      </button>
+    </form>
+
+  </main>
+
+  <h3 class="clients-total" id="clients-total">Total clients: 1</h3>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/pt-br.js"></script>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
